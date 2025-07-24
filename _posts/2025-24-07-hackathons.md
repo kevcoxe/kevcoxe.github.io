@@ -1,6 +1,6 @@
 ---
 title: Hackathons
-date: 2025-07-23 11:23:00 -400
+date: 2025-07-24 11:23:00 -400
 author: kevcoxe
 categories: [Blog, Hackathons]
 tags: [hackathon]
@@ -90,21 +90,17 @@ I did not have any success building a project, but I was inspired by the project
 That empty suitcase I brought with me, well I filled it. I came home with over 40 t-shirts and other merch.
 
 
+## I Love Hackathons
+I love hackathons, I loved going to these events and learning new things. I loved the energy that was in the space with everyone working hard to build something new and inovative.
+It was a nice way to being able to try out a new language or a new technology that you had never used before. You could chat with experts and try out something new.
+This helps people step out of their comfort zone and learn something new.
 
-<!-- 
-I was a softmore in college at the [University of Maryland Baltimore County](https://umbc.edu/) (UMBC) and I had not done any web development.
-After that I learned about Angular.js and started my love for learning webdev.
-I loved how I could easily create an ineractive web app that users could interact with.
-I then went on to go to as many Hackathons as I could.
+I believe this is not just great for students but should also be done in corporations.
+I started the hackathons that are still going on inside of KeyW when I worked there.
+I started it with our interns at the time to help inspire them to learn new things and build projects fast.
+This ended up being very valuable for KeyW and helped them come up with new projects that would graduate into profitable services.
 
-I went to [Hack the north](https://2014.hackthenorth.com/) a Hackathon at the University of Waterloo, Ontario, me and a team built [Jokes for Pebble](https://github.com/kevcoxe/jokesForPebble) a little app for the [pebble](https://en.wikipedia.org/wiki/Pebble_(watch)) smartwatch. It would hit a chatbot [Reply4Me](https://devpost.com/software/reply4me) that my previous team had built at [PenApps X 2014](https://pennappsx.devpost.com/).
-Reply4Me was a pretty sweet app. You could install it on Android and have it intercept your text messages and answer your messages for you. This was 
+I think hackathons inside of a company is a great way to break up the day to day work and help inspire new ideas, workers can also find new areas that inspire them and can help them enjoy their work.
+This can also help team building across teams inside of the company.
 
-
-### My Hackathon Projects
-
-- [Bitd00d](https://devpost.com/software/bitd00d)
-- [Reply4Me](https://devpost.com/software/reply4me)
-- [Jokes for Pebble](https://github.com/kevcoxe/jokesForPebble)
-- [poppit](https://devpost.com/software/poppit-n2l58)
-- [Pantry](https://devpost.com/software/pantry-fdby0) -->
+Also a little bit of competition won't hurt anyone. It is fun to compete with the team next door to see who can be more creative.
