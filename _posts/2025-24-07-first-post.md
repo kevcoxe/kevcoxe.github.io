@@ -6,8 +6,8 @@ categories: [Blog]
 ---
 
 I have always been the guy who did not like writing. In high school I was told to write a 3 paragraph and I asked
-1) How manay sentenses per paragraph?
-2) How many words per sentense?
+1) How many sentences per paragraph?
+2) How many words per sentence?
 
 I wanted to narrow down my requirements to find the lowest requirement like it was some challenge. The teacher did not appreciate this. But I still passed.
 

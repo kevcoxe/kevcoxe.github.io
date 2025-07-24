@@ -41,14 +41,14 @@ I held on to my fourth of a bitcoin so well that I lost the private key.
   <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3AzaTBydmV6OGtmYzF0amh4MHZiY3cxY2NqaWNrczBwNHZvNGg1aSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/6yRVg0HWzgS88/giphy.gif" alt="Funny gif" />
 </div>
 
-It is ok, I learned a lot and got more value from the inpiration from the event then a bitcoin is worth.
+It is ok, I learned a lot and got more value from the inspiration from the event than a bitcoin is worth.
 
 
 ### PenApps X 2014
 [PenApps X 2014](https://pennappsx.devpost.com/) was the first hackathon that I had to travel to.
-I was able to find a good room at PenApps that had a few teams working in it, we all worked to help eachother and learn from eachother. My team found a AI framework that we used to build a chatbot with a twist.
-We wanted to use some of the sponsors to try to win some prizes, so we decided to use [Twillio](https://www.twilio.com/en-us) to make a bot you could text with and interact over text.
-We built a few integrations, we had 2 seperate phone numbers that you could text, we had an android app that could intercept your text messages and respond for you.
+I was able to find a good room at PenApps that had a few teams working in it, we all worked to help each other and learn from each other. My team found an AI framework that we used to build a chatbot with a twist.
+We wanted to use some of the sponsors to try to win some prizes, so we decided to use [Twilio](https://www.twilio.com/en-us) to make a bot you could text with and interact over text.
+We built a few integrations, we had 2 separate phone numbers that you could text, we had an android app that could intercept your text messages and respond for you.
 
 We pitched the idea of [Reply4Me](https://devpost.com/software/reply4me) to the ladies there saying
 > When a guy asks for your number and you do not want to give out your number
@@ -58,16 +58,16 @@ We pitched the idea of [Reply4Me](https://devpost.com/software/reply4me) to the 
 One of our team members had turned on the app and forgot and it was answering questions his friend was asking without him even knowing.
 The friend did not even notice that it was an AI. And remember this was before the current LLMs that are out there.
 
-I also madea [Jokes for Pebble](https://github.com/kevcoxe/jokesForPebble) a little app for the [pebble](https://en.wikipedia.org/wiki/Pebble_(watch)) smartwatch.
+I also made a [Jokes for Pebble](https://github.com/kevcoxe/jokesForPebble) a little app for the [pebble](https://en.wikipedia.org/wiki/Pebble_(watch)) smartwatch.
 This just hit the api we had and would ask "Tell me a joke" take the response and show it on your watch.
 
 
 ### Hack the north
 [Hack the north](https://2014.hackthenorth.com/) was an interesting hackathon. This was my first and only international hackathon (yes it was just Canada but still).
-It turned out I got sick and felt like crap the entire time. Which when you feel horible staying somewhere that is cold and no beds is not ideal.
+It turned out I got sick and felt like crap the entire time. Which when you feel horrible staying somewhere that is cold and no beds is not ideal.
 I did have fun and there were some very cool projects that were built there.
 
-I joined a team of people who I had never met and we build a [pebble](https://en.wikipedia.org/wiki/Pebble_(watch)) smartwatch app called [poppit](https://devpost.com/software/poppit-n2l58).
+I joined a team of people who I had never met and we built a [pebble](https://en.wikipedia.org/wiki/Pebble_(watch)) smartwatch app called [poppit](https://devpost.com/software/poppit-n2l58).
 The idea was it was a [Bopit](https://en.wikipedia.org/wiki/Bop_It) app for pebble, it would say to do something like hit a specific button, or shake the watch and you would get points.
 
 We did not win any prizes, but I did make a friend and got an internship from this. Also first time having Poutine.
@@ -91,7 +91,7 @@ That empty suitcase I brought with me, well I filled it. I came home with over 4
 
 
 ## I Love Hackathons
-I love hackathons, I loved going to these events and learning new things. I loved the energy that was in the space with everyone working hard to build something new and inovative.
+I love hackathons, I loved going to these events and learning new things. I loved the energy that was in the space with everyone working hard to build something new and innovative.
 It was a nice way to being able to try out a new language or a new technology that you had never used before. You could chat with experts and try out something new.
 This helps people step out of their comfort zone and learn something new.
 
