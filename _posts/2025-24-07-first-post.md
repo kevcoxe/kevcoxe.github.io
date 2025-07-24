@@ -5,15 +5,24 @@ author: kevcoxe
 categories: [Blog]
 ---
 
-## Why a blog, why now?
-As a software developer, I'm constantly learning, whether it's debugging a tricky issue at work, experimenting with a new framework on the weekend, or refining how I approach a common problem. Over time, I have realized that these moments are worth capturing, not just for others, but for myself.
+I have always been the guy who did not like writing. In high school I was told to write a 3 paragraph and I asked
+1) How manay sentenses per paragraph?
+2) How many words per sentense?
 
-This blog is my way of doing that.
+I wanted to narrow down my requirements to find the lowest requirement like it was some challenge. The teacher did not appreciate this. But I still passed.
 
-I want a space where I can keep track of what I'm building and learning, both professionally and in my personal projects. More than just the final product or the working code, I want to document the why behind the choices I make, why I chose a certain tool, what tradeoffs I considered, and what I'd do differently next time.
+Anyways, why would the guy who does not like writing want to start a blog?
 
-Sharing knowledge is a big part of why I'm putting this online. I've learned so much from reading others' blog posts, and I hope mine can offer the same value, even if it's just helping someone else feel less alone when they hit the same weird bug I did.
+## Why a blog? Why now?
 
-Lastly, I think this blog will grow into something like a living portfolio, a place to look back and see the progress I've made, the problems I've solved, and the journey I've taken.
+I recently changed jobs and I had to update my resume and I had to think back on all of the things that I had done in the past years.
+I wanted to update the list of projects I had worked on, but where was the list of projects?
+Oh the list was in my head.
 
-Thanks for reading, and welcome!
+I want to archive the thoughts I have or the projects I have worked on (at least the ones I can remember and have time to write about) so that I can look back and see all of the things I have done as a reminder of where I came from.
+I would love to inspire others (if anyone does read this) to keep improving and learning new things.
+
+One day maybe train an AI on this blog so I can have my own chatbot to talk with about previous things I have done almost like an interactive resume.
+In the end this is mostly for me, and if others enjoy then that is great!
+
+I hope you enjoy.
