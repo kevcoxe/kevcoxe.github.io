@@ -1,6 +1,6 @@
 ---
 title: Endless Stories AI
-date: 2025-07-25 11:23:00 -400
+date: 2025-07-29 09:00:00 -400
 author: kevcoxe
 categories: [Blog, Projects]
 tags: [ai, nextjs, aws, devops]
@@ -58,6 +58,106 @@ My kids loved making stories, they would input a few ideas and love to hear what
 
 ## Design process
 
+For designing the app I knew I wanted to use [Next.js](https://nextjs.org/) and [Supabase](https://supabase.com/) because that was what I was comfortable with.
+I knew I would need a place to deploy my Next.js app to and then I was going to use managed Supabase.
+As for the text/image/audio generation I decided to go with [OpenAI API](https://openai.com/api/) because it was super easy to use and I liked the results.
+
+## Development
+
+### Phase 1 MVP
+In about 2 days I had a working prototype where I had a home page with a list of all the stories and you could read them and see the pictures.
+I had a form to input your story idea and it would generate everything.
+
+This was exciting to see, but there were issues.
+- Creating all of the parts to the story in one API call took quite a long time
+- I was using supabase for all of the storage, text, image, audio, it was going to get expensive
+
+### Phase 2 Move to AWS
+I like to use [Terraform](https://www.hashicorp.com/en/products/terraform) when I deploy anything to AWS.
+So first thing I did was create my S3 bucket in AWS that would story my Terraform state.
+I like to do this so that way when (not if, but when) my computer dies I have the state of my infrastructure saved to the cloud.
+
+Next I created a S3 bucket to for my asset storage and IAM user for the app to be able to access the S3 bucket.
+
+#### Storing Assets
+First thing I did was move my storage to AWS, I was still keeping supabase for the main database to story info on each story, but I moved all images and audio files to AWS S3.
+S3 was cheap and easy to use. This can come with a downside tho.
+You do not want to have an open S3 bucket that is visible to the world that anyone can access, so how would I be able to access those files from my Next.js app?
+
+The answer is [Sharing objects with presigned URLs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html).
+This would generate a signed URL that could have an expiration so it would be valid while the client tried to download the asset but then after let's say 60 seconds be invalid not letting others view the asset.
+
+#### Fixing Long Calls to AI
+There are some general things you need to be able to handle when dealing with calls to an AI API.
+- The long time it can take for a response
+- Getting rate limited
+- API errors
+- Dealing with bogus data
+
+When you start to chain multiple requests behind your one API call things will start to have issues.
+Yes you can add some status or break up your calls into multiple calls, but still if you have a set number of tasks that need to happen why not use a message queue.
+
+For this I went with an AWS SQS with AWS lambda function pipeline.
+The basic idea is you would put a message onto your message queue and then a lambda function will pick up that message processing it.
+If a message fails, you can have a set number of retries and a delay, this is great for dealing with the rate limiting or API errors.
+If a message fails past that, you can add the message to a dead letter queue and have a seperate lambda function deal with them.
+
+![aws pipeline](/assets/img/posts/endless-stories/endless_stories-sqs-lambda-workflow.png)
+
+There is an issue where you might not want your lambda function running to long and some of these AI calls can take a while, but I did not run into any issues here.
+
+I decided to go with one lambda function that based on the message state would do different tasks.
+
+- Moderate input story
+- Generate story
+- Moderate final story
+- Generate title
+- Generate image prompt
+- Generate image
+- Generate audio
+- Generate tags
+- Generate metadata
+- Notify user
+
+![aws sqs order](/assets/img/posts/endless-stories/sqs-message-order.png)
+
+
+### Phase 3 Ditching Vercel
+Originally I had deployed to [Vercel](https://vercel.com/), they make Next.js and make deploying there insanely easy.
+I do not mind deploying there, but I did have a few issues.
+I was using an organization on [Github](https://github.com/) and Vercel wanted me to also pay to be able to use that repo.
+I was trying to reduce the number of services I was paying for for this app that I had no idea if it would even make money.
+I also wanted to try out [AWS Amplify](https://aws.amazon.com/amplify/).
+
+Amplify was easy to setup, you can connect your github repo to it and when you push code it will auto deploy your project.
+I also liked having most of my expenses in one place.
+AWS also has a pretty generous free tier, so those "expenses" were mostly S3 storage.
+
+### Phase 4 Adding Payments
+I did not want to deploy this site and it become an overnight success and have no way of getting paid.
+I also wanted to learn about using [Stripe Payments](https://stripe.com/payments).
+
+Adding Stripe integration was very easy, there are many tutorials out there and I had found one that integrated with Supabase.
+This took me about a day of work.
+Now I have a way of adding "Credits" to a user and you spend your credits creating stories.
+I had the idea of maybe having multiple price options or using a premium voice option, but I never did.
+
+
+## Final Thoughts
+I really enjoyed creating this site. I used it multiple times a day.
+I learned a lot, from dealing with AI API calls to adding payments for a service.
+In the end I was the top user of the site, but I also would do it again in a heartbeat.
+
+The status of the site right now is that it is not running. Like I said I was trying to not be paying for a bunch of services when I did not make any money off of it.
+So I used managed Supabase which has a free tier, this is great.
+One of the limitations of the free tier is that if your project is not used after 7 days it will be paused.
+
+I could just keep using the site every couple days, but I moved onto my next project and did not have time.
+I am working on moving this to a self hosted model so I do not need to use AWS or managed Supabase.
+I will keep you posted.
+
+
+<!-- 
 Now I want to talk about how I created this app and some of the problems I faced and how I resolved them.
 
 I knew I wanted to use [Next.js](https://nextjs.org/) since it was easy to spin up a webapp and I enjoyed the server actions portion which made calling backend functions easy.
@@ -125,4 +225,4 @@ There was also a Lambda that would processs those messages, I would recieve an a
 
 ### Final version
 
-## Next steps
+## Next steps -->
