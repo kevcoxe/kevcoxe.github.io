@@ -1,0 +1,13 @@
+<!-- Display PostHog pageviews -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const pv = document.getElementById('pageviews');
+
+    if (pv !== null && typeof posthog !== 'undefined') {
+      // PostHog doesn't have a direct API for getting pageview counts like GoatCounter
+      // You would need to implement this using PostHog's query API
+      // For now, we'll just show a placeholder
+      pv.innerText = '-';
+    }
+  });
+</script>
